@@ -11,78 +11,72 @@
 <body>
     <section class="container">
         <div class="row">
-            <div class="col col-6 ">
+            <div class="col col-lg-6 col-12 ">
                 <img class="img-fluid" src="images/mac.png" alt="mac-image">
           
             </div>
-            <div class="col col-6 ">
+            <div class="col col-lg-6 col-12">
                 <h1>Customize your Blue 24-inch iMac with Applr M1 chip</h1>
                 <p>
                     Apple M1 chip with 8-core CPU with 4 performance cores and 4 efficiency cores, 7-core Neural Engine 8GB unifed memory 256GB SSD storage Two Thunderbolt/USB 4 ports Magic Mouse Keyboard-US English.
                 </p>
                 <div class="mt-4">
                     <h6 class="fw-bold">Memory</h6>
-                    <button type="button" class="btn btn-primary">8GB unified memory</button>
-                    <button type="button" class="btn btn-primary">16GB unified memory</button>
+                    <button id="memory-8-gb" type="button" class="btn btn-primary mb-3">8GB unified memory</button>
+                    <button id="memory-16-gb" type="button" class="btn btn-primary mb-3">16GB unified memory</button>
                 </div>
                 <div class="mt-4">
                     <h6 class="fw-bold">Storage</h6>
-                    <button type="button" class="btn btn-primary">256GB SSD storage</button>
-                    <button type="button" class="btn btn-primary">512GB SSD storage</button>
-                    <button type="button" class="btn btn-primary">1TB SSD storage</button>
+                    <button id="first-ssd-storage" type="button" class="btn btn-primary mb-3">256GB SSD storage</button>
+                    <button id="second-ssd-storage" type="button" class="btn btn-primary mb-3">512GB SSD storage</button>
+                    <button id="third-ssd-storage" type="button" class="btn btn-primary mb-3">1TB SSD storage</button>
                 </div>
                 <div class="mt-4">
                     <h6 class="fw-bold">Choose your delivery option</h6>
-                    <button type="button" class="btn btn-primary fs-6">Friday, Aug 25 FREE Prime Delivery</button>
-                    <button type="button" class="btn btn-primary fs-6">Friday, Aug 21 Delivery charge $20</button>
+                    <button id="free-delivery" type="button" class="btn btn-primary fs-6 mb-3">Friday, Aug 25 FREE Prime Delivery</button>
+                    <button id="express-delivery" type="button" class="btn btn-primary fs-6 mb-3">Friday, Aug 21 Delivery charge $20</button>
                 </div>
                 <div class="mt-4">
                     <table class="table">
                         <tbody>
                           <tr>
                             <td class="fw-bold">Best Price</td>
-                            <td class="fw-bold">$1299</td>
+                            <td class="fw-bold">$<span id="best-price">1299</span></td>
                           </tr>
                           <tr>
                             <td class="fw-bold">Extra Memory Cost</td>
-                            <td class="fw-bold">$0</td>
+                            <td class="fw-bold">$<span id="extra-memory-cost">0</span></td>
                           </tr>
                           <tr>
                             <td class="fw-bold">Extra Storage cost</td>
-                            <td class="fw-bold">$0</td>
+                            <td class="fw-bold">$<span id="extra-storage-cost">0</span></td>
                           </tr>
                           <tr>
                             <td class="fw-bold">Delivery Charge</td>
-                            <td class="fw-bold">$0</td>
+                            <td class="fw-bold">$<span id="delivery-charge">0</span></td>
                           </tr>
                           <tfoot>
                             <tr>
                                 <td class="fw-bold">Total Price</td>
-                                <td class="fw-bold">$1299</td>
+                                <td class="fw-bold">$<span id="total-price">1299</span></td>
                               </tr>
                           </tfoot>
                         </tbody>
                       </table>
                 </div>
                 <div>
-                    <p>Add pomo code</p>
-                    <input type="text" name="" id="">
-                    <button type="button" class="btn btn-danger">Apply</button>
+                    <h5 class="text-primary mb-3">Add Promo Code</h5>
+                    <input type="text" name="" id="promo-code">
+                    <button id="pormo-btn" type="button" class="btn btn-danger">Apply</button>
                 </div>
             </div>
         </div>
         <div class="mb-3">
             <hr>
-            <h3 class="text-center">Total $<span>1299</span> </h3>
+            <h3 class="text-center">Total $<span id="grand-total">1299</span> </h3>
         </div>
 
     </section>
-
-
-
-
-
-
     <!-- Javascripts file  -->
     <script src="scripts/main.js"></script>
 </body>
