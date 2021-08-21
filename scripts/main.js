@@ -1,21 +1,7 @@
-// set function for memory
-function memoryCost(memoryPrice){
-    const extraMemory = document.getElementById('extra-memory-cost');
-    extraMemory.innerText = memoryPrice;
-    totalPrice()
-};
-
-// function for SSD Storage 
-function extraStorage(storagePrice){
-    const updateStoragesPrice = document.getElementById('extra-storage-cost');
-    updateStoragesPrice.innerText = storagePrice;
-    totalPrice()
-};
-
-// function for delivery charge 
-function deliveryCharge(charge){
-    const delievryCost = document.getElementById('delivery-charge');
-    delievryCost.innerText = charge;
+// set function for memory, SSD Storage, and delivery charge 
+function addOn(product, Price){
+    const addOncost = document.getElementById(product + '-cost');
+    addOncost.innerText = Price;
     totalPrice()
 };
 
@@ -40,39 +26,39 @@ function totalPrice(){
 function promoCode(inputCode){
     const realPromo = 'stevekaku';
     if(inputCode == realPromo){
-        document.getElementById('pormo-btn').disabled = 'true';
-        const grandTotal = document.getElementById('grand-total').innerText;
+    document.getElementById('pormo-btn').disabled = 'true';
+    const grandTotal = document.getElementById('grand-total').innerText;
 
-        let calculation = parseFloat(grandTotal * .2);
-        const finnalPrice = grandTotal - calculation;
-        document.getElementById('grand-total').innerText = finnalPrice;
+    let calculation = parseFloat(grandTotal * .2);
+    const finnalPrice = grandTotal - calculation;
+    document.getElementById('grand-total').innerText = finnalPrice;
     }
 }
 // Add event handler for mermory
 document.getElementById('memory-8-gb').addEventListener('click', function(){
-    memoryCost(0);
+    addOn('extra-memory', 0);
 });
 document.getElementById('memory-16-gb').addEventListener('click', function(){
-    memoryCost(180);
+    addOn('extra-memory', 180);
 });
 
 // Add event handler for SSD Storage 
 document.getElementById('first-ssd-storage').addEventListener('click', function(){
-    extraStorage(0);
+    addOn('extra-storage', 0);
 });
 document.getElementById('second-ssd-storage').addEventListener('click', function(){
-    extraStorage(100);
+    addOn('extra-storage', 100);
 });
 document.getElementById('third-ssd-storage').addEventListener('click', function(){
-    extraStorage(180);
+    addOn('extra-storage', 180);
 });
 
 // Delivery charge update
 document.getElementById('free-delivery').addEventListener('click', function(){
-    deliveryCharge(0);
+    addOn('delivery', 0);
 });
 document.getElementById('express-delivery').addEventListener('click', function(){
-    deliveryCharge(20);
+    addOn('delivery', 20);
 });
 
 // handle promocode button event
@@ -82,6 +68,4 @@ document.getElementById('pormo-btn'),addEventListener('click', function(){
     promoCode(inputPromo);
 
     document.getElementById('promo-code').value = '';
-
-
 })
