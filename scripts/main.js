@@ -13,7 +13,7 @@ function totalPrice(){
     const extraMemoryCost = parseInt(extraMemory.innerText);
     const extraStorage = document.getElementById('extra-storage-cost');
     const extraStorageCost = parseInt(extraStorage.innerText);
-    const deliveryCharge = document.getElementById('delivery-charge');
+    const deliveryCharge = document.getElementById('delivery-cost');
     const deliveryCost = parseInt(deliveryCharge.innerText);
     const totalAmout = bestPriceTotal + extraMemoryCost + extraStorageCost + deliveryCost;
     const total = document.getElementById('total-price');
